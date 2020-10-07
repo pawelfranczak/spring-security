@@ -21,11 +21,6 @@ public class UserController {
 	String signIn() {
 		return "sign-in";
 	}
-	
-	@PostMapping("/sign-in")
-	String signInPost() {
-		return "success";
-	}
 
 	@GetMapping("/sign-up")
 	String signUpPage(User user) {
