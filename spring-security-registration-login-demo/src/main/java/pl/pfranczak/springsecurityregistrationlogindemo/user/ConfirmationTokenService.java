@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
+import pl.pfranczak.springsecurityregistrationlogindemo.entity.User;
 
 @Service
 @AllArgsConstructor
@@ -24,5 +25,5 @@ public class ConfirmationTokenService {
 	Optional<ConfirmationToken> findConfirmationTokenByToken(String token) {
 		return confirmationTokenRepository.findConfirmationTokenByConfirmationToken(token);
 	}
-
+	
 }
