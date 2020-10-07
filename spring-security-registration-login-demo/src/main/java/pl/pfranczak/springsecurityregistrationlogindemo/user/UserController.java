@@ -42,6 +42,6 @@ public class UserController {
 	String confirmMail(@RequestParam("token") String token) {
 		Optional<ConfirmationToken> optionalConfirmationToken = confirmationTokenService.findConfirmationTokenByToken(token);
 		optionalConfirmationToken.ifPresent(userService::confirmUser);
-		return "/sign-in";
+		return "redirect:/sign-in";
 	}
 }
